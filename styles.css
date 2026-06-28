@@ -46,6 +46,8 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-height);
   font-size: 16px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -55,6 +57,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  width: 100%;
 }
 
 img {
@@ -275,6 +278,15 @@ a {
 }
 
 
+.about-section,
+.specialist-section,
+.services-section,
+.infra-section,
+.referral-section,
+.contact-section {
+  overflow: hidden;
+}
+
 /* Section Components */
 .section-subtitle {
   font-family: var(--font-headers);
@@ -354,6 +366,20 @@ a {
 
 .logo-img:hover {
   transform: scale(1.03);
+}
+
+.header-mobile-title {
+  display: none;
+  font-family: var(--font-headers);
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 0.72rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 10px;
+  flex: 1;
 }
 
 .mobile-nav-toggle {
@@ -1756,6 +1782,15 @@ a {
 }
 
 @media (max-width: 768px) {
+  .logo-img {
+    height: 50px;
+    max-height: 50px;
+  }
+
+  .header-mobile-title {
+    display: block;
+  }
+
   .mobile-nav-toggle {
     display: block;
   }
@@ -1926,10 +1961,11 @@ a {
   }
 
   .whatsapp-floating-widget {
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
+    bottom: 24px;
+    right: 24px;
+    width: 54px;
+    height: 54px;
+    z-index: 9999;
   }
 
   .whatsapp-widget-img {
