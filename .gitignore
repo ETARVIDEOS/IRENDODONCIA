@@ -1,0 +1,8 @@
+# Exclude base briefing and reference files
+*.docx
+*.pdf
+*.txt
+
+# Explicitly allow web files ending in .txt
+!robots.txt
+!llms.txt
